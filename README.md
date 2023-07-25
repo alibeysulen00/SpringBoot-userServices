@@ -35,10 +35,11 @@
 
 <strong> application.properties </strong> file and enter your database connection information:
 
-"""java
+```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+
 
 
 
