@@ -10,4 +10,35 @@
   
 </ul>
 
+<h1>    Requirements    </h1>
+<ul>
+
+<li>   Java Development Kit (JDK) 11 or higher  </li>
+<li>  Maven 3.x</li>
+<li> - MySQL database (or configuration for another database connection)
+ </li>
+  
+</ul>
+
+<h1> Installation and Operation </h1>
+<ol>
+
+<li> Clone this project from GitHub or download it as a zip.  </li>
+<li>  Go to the project directory: </li>
+
+
+  
+</ol>
+
+
+<h2>Before running the application   </h2>
+
+<strong> application.properties </strong> file and enter your database connection information:
+
+'''java
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+
+
 
