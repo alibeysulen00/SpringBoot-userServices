@@ -41,9 +41,9 @@ spring.datasource.username=your_username
 spring.datasource.password=your_password
 
 ```
-![Add user ](springBoot1) ![Add user ](springBoot2)
-![Get All user ](springBoot3)
-![Delete user ](springBoot4)
+![Add user ](springBoot1.png) ![Add user ](springBoot2.png)
+![Get All user ](springBoot3.png)
+![Delete user ](springBoot4.png)
 
 
 
