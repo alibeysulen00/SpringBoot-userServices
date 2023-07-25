@@ -40,16 +40,19 @@ spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 
+
 ```
-<br>
 Add user
+
 ![Add user ](springBoot1.png) 
 ![Add user ](springBoot2.png)
-<br> 
+
 Get All users
+
 ![Get All user ](springBoot3.png)
-<br>
+
 Delete user
+
 ![Delete user ](springBoot4.png)
 
 
