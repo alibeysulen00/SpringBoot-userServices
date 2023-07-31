@@ -14,19 +14,33 @@ public class MainController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping(path="/add")
-    public @ResponseBody String addNewUser (@RequestParam String name
+    @PostMapping(path = "/add")
+    public @ResponseBody String addNewUser(@RequestParam String name
             , @RequestParam String email) {
 
-        User n = new User();
-        n.setName(name);
-        n.setEmail(email);
-        userRepository.save(n);
+        User user = new User();
+        user.setName(name);
+        user.setEmail(email);
+        userRepository.save(user);
         return "Saved";
     }
 
-    @GetMapping(path="/all")
+    @GetMapping(path = "/all")
     public @ResponseBody Iterable<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+
+    @PostMapping(path="/delete")
+    public @ResponseBody String deleteUserByName(@RequestParam String name) {
+        Iterable<User> users = userRepository.findAll();
+        for (User user : users) {
+            if (user.getName().equalsIgnoreCase(name)) {
+                userRepository.delete(user);
+                return "User deleted: " + name;
+            }
+        }
+        return "User not found: " + name;
+    }
+
 }
