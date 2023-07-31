@@ -47,9 +47,22 @@ Add user
 ![Add user ](springBoot1.png) 
 ![Add user ](springBoot2.png)
 
+
+Get user 
+
+![Get user](getSpringBoot.png)
+
 Get All users
 
 ![Get All user ](springBoot3.png)
+
+
+Update User
+
+![update  user ](updateSpringBoot.png)
+![update  user ](updateSpringBoot1.png)
+
+
 
 Delete user
 
