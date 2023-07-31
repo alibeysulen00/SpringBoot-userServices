@@ -2,11 +2,7 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(path="/demo")
@@ -30,6 +26,22 @@ public class MainController {
         return userRepository.findAll();
     }
 
+    @GetMapping(path = "/get")
+    public @ResponseBody User getUserById(@RequestParam Integer id){
+        return userRepository.findById(id).orElse(null);
+    }
+
+    @PutMapping(path = "/update")
+    public @ResponseBody String updateUser(@RequestParam Integer id, @RequestParam String name, @RequestParam String email) {
+        User user = userRepository.findById(id).orElse(null);
+        if (user != null) {
+            user.setName(name);
+            user.setEmail(email);
+            userRepository.save(user);
+            return "Updated";
+        }
+        return "User not found";
+    }
 
     @PostMapping(path="/delete")
     public @ResponseBody String deleteUserByName(@RequestParam String name) {
